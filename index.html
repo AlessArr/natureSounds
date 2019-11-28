@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/styles/style.css">
+  <title>Real Mur</title>
+</head>
+<body>
+  <header>
+    <div class="volume"></div>
+    <h1>Nature Sounds</h1>
+    <h2>Ambient sounds to wash away distraction.</h2>
+    <div class="btns">
+      <div class="btnControl">
+        <div><button id = 'rand' class="randBut">R</button></div>
+        <div class="mainOrder"><button class="startBut"><div class="play" id = "start"></div></button></div>
+        <div><button id = 'reset' class="reset icon-trash-empty"></button></div>
+      </div>
+      <!--<div class="btnShare">
+        <div class = 'btnStyle'><button id = 'btnTimer' class="timer">timer</button></div>
+        <div class = 'btnStyle'><button id = 'btnMix' class="mix">mixes</button></div>
+        <div class = 'btnStyle'><button id = 'btnShare' class="share">share</button></div>
+        <div class="secRowField unvisible">
+          <div class="field">
+            <div id="timeID">ds</div>
+            <button class = 'cancleField'>Cancle</button>
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </header>
+  <main>
+    <div class="audios" id = "searchId">
+
+      <div class="audio_grid">
+        <button id = "birds" class = "btnAu icon-tree-2">
+          <h4 class = "nameSound">Birds</h4>
+          <audio id = "sound_birds" class = "sound" src="src/styles/assets/audios/birds.mp3" loop></audio>
+        </button>
+        <input id = 'birdsRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "crickets" class = "btnAu icon-leaf">
+            <h4 class = "nameSound">Crickets</h4>
+          <audio id = "sound_crickets" class = "sound" src="src/styles/assets/audios/crickets.flac" loop></audio>
+        </button>
+        <input id = 'cricketsRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "rain" class = "btnAu icon-rain">
+            <h4 class = "nameSound">Rain</h4>
+          <audio id = "sound_rain" class = "sound" src="src/styles/assets/audios/rain.mp3" loop></audio>
+        </button>
+        <input id = 'rainRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "thunder" class = "btnAu icon-cloud-flash">
+            <h4 class = "nameSound">Thunder</h4>
+          <audio id = "sound_thunder" class = "sound" src="src/styles/assets/audios/thunder.mp3" loop></audio>
+        </button>
+        <input id = 'thunderRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "wave" class = "btnAu icon-waves">
+            <h4 class = "nameSound">Waves</h4>
+          <audio id = "sound_wave" class = "sound" src="src/styles/assets/audios/waves.mp3" loop></audio>
+        </button>
+        <input id = 'waveRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "wind" class = "btnAu icon-wind">
+          <h4 class = "nameSound">Wind</h4>
+          <audio id = "sound_wind" class = "sound" src="src/styles/assets/audios/wind.mp3" loop></audio>
+        </button>
+        <input id = 'windRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "fire" class = "btnAu icon-fire">
+            <h4 class = "nameSound">Fire</h4>
+          <audio id = "sound_fire" class = "sound" src="src/styles/assets/audios/fire.mp3" loop></audio>
+        </button>
+        <input id = 'fireRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "snow" class = "btnAu icon-snowflake-o">
+          <h4 class = "nameSound">Snow</h4>
+          <audio id = "sound_snow" class = "sound" src="src/styles/assets/audios/snow.mp3" loop></audio>
+        </button>
+        <input id = 'snowRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "cat" class = "btnAu icon-github">
+          <h4 class = "nameSound">Cat</h4>
+          <audio id = "sound_cat" class = "sound" src="src/styles/assets/audios/mur.mp3" loop></audio>
+        </button>
+        <input id = 'catRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "ball" class = "btnAu icon-basketball">
+            <h4 class = "nameSound">Ball</h4>
+          <audio id = "sound_ball" class = "sound" src="src/styles/assets/audios/ball.mp3" loop></audio>
+        </button>
+        <input id = 'ballRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "birdSong" class = "btnAu  icon-twitter-bird">
+          <h4 class = "nameSound">Bird's Song</h4>
+          <audio id = "sound_birdSong" class = "sound" src="src/styles/assets/audios/birdSong.mp3" loop></audio>
+        </button>
+        <input id = 'birdSongRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "lynx" class = "btnAu icon-gitlab">
+          <h4 class = "nameSound">Lynx</h4>
+          <audio id = "sound_lynx" class = "sound" src="src/styles/assets/audios/lynx.mp3" loop></audio>
+        </button>
+        <input id = 'lynxRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "train" class = "btnAu icon-train">
+          <h4 class = "nameSound">Train</h4>
+          <audio id = "sound_train" class = "sound" src="src/styles/assets/audios/train.mp3" loop></audio>
+        </button>
+        <input id = 'trainRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "koto" class = "btnAu icon-layers-alt">
+          <h4 class = "nameSound">Koto</h4>
+          <audio id = "koto_sound" class = "sound" src="src/styles/assets/audios/koto.mp3" loop></audio>
+        </button>
+        <input id = 'kotoRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+      <div class="audio_grid">
+        <button id = "taiko" class = "btnAu icon-db-shape">
+          <h4 class = "nameSound">Taiko</h4>
+          <audio id = "sound" class = "sound" src="src/styles/assets/audios/taiko.mp3" loop></audio>
+        </button>
+        <input id = 'taikoRange' type="range" name="points" min="0" max="1" value = "0" step = "0.02" class = "volumeIn">
+      </div>
+
+    </div>
+  </main>
+  <footer></footer>
+</body>
+<script src = "src/index.js"></script>
+</html>
